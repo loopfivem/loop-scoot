@@ -29,7 +29,7 @@ jobs:
           rsync -a --exclude '.git' --exclude '.github' --exclude 'dist' --exclude '.gitattributes' --exclude '.gitignore' ./ dist/loop-scoot/
           cd dist && zip -qr loop-scoot.zip loop-scoot
 
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: dist/loop-scoot.zip
           generate_release_notes: true
